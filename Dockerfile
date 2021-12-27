@@ -14,6 +14,8 @@ RUN set -x && \
     make \
     gcc \
     g++ \
+    iputils-ping \
+    telnet \
     unzip \
     zsh \
     openssh-server \
