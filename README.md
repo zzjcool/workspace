@@ -11,7 +11,9 @@
 7. ssh
 8. unzip
 9. make
-10. zsh
+10. gcc
+11. g++
+12. zsh
 
 ## 启动
 

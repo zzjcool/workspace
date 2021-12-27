@@ -1,0 +1,11 @@
+version: "3"
+services:
+  workspace:
+    image: zzjcool/workspace
+    container_name: workspace
+    network_mode: "host"
+    # TODO 添加.ssh、vscode插件安装的目录挂载
+    volumes:
+    # 这里替换成需要挂载的目录
+      - "/home/zheng:/root/host"
+    restart: unless-stopped
