@@ -11,6 +11,7 @@ RUN set -x && \
     clang-format \
     wget \
     curl \
+    docker-compose \
     git \
     make \
     gcc \

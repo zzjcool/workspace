@@ -3,6 +3,7 @@ services:
   workspace:
     image: zzjcool/workspace
     container_name: workspace
+    privileged: true
     ports:
       - "2222:2222"
     volumes:
