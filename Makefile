@@ -4,8 +4,8 @@ build:
 
 test:
 	# 测试镜像
-	# 请使用docker exec -it workspace zsh进入
-	docker run -it --name workspace --net host --rm zzjcool/workspace
+	# 请使用docker exec -it test-workspace zsh进入
+	docker run -it -v host:/root -v /home:/root/host --name test-workspace --privileged --rm zzjcool/workspace
 
 push:
 	docker push zzjcool/workspace

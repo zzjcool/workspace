@@ -1,3 +1,4 @@
+FROM docker:20-dind as docker
 FROM debian:11
 
 COPY entrypoint.sh /usr/local/bin/
@@ -18,6 +19,7 @@ RUN set -x && \
     telnet \
     unzip \
     zsh \
+    iptables \
     openssh-server \
     ca-certificates \
     nano && \
@@ -37,6 +39,10 @@ RUN set -x && \
     apt-get purge && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/boot
+
+COPY --from=docker /usr/local/bin/ /usr/local/bin/
+
+VOLUME /var/lib/docker
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 

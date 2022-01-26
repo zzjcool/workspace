@@ -3,17 +3,19 @@
 支持的环境：
 
 1. ssh
-2. nano
-3. curl
-4. wget
-5. go
-6. git
-7. ssh
-8. unzip
-9. make
-10. gcc
-11. g++
-12. zsh
+2. docker
+3. iptables
+4. nano
+5. curl
+6. wget
+7. go
+8. git
+9. ssh
+10. unzip
+11. make
+12. gcc
+13. g++
+14. zsh
 
 ## 启动
 
