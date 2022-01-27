@@ -18,6 +18,7 @@ RUN set -x && \
     g++ \
     iputils-ping \
     telnet \
+    zip \
     unzip \
     zsh \
     iptables \
