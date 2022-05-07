@@ -1,5 +1,6 @@
 build:
 	# "开始构建镜像"
+	# docker build --network=host -t csighub.tencentyun.com/zhijiezheng/zzj .
 	docker build -t zzjcool/workspace .
 
 test:

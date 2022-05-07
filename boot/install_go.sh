@@ -2,7 +2,7 @@
 # install go protoc
 mkdir ~/tmp
 cd ~/tmp
-GO_VERSION="1.17.5"
+GO_VERSION="1.18.1"
 PROTOC_VERSION="3.19.1"
 wget https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz
 tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz

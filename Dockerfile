@@ -5,6 +5,9 @@ COPY entrypoint.sh /usr/local/bin/
 
 ADD boot /root/boot
 RUN set -x && \
+    cp ~/boot/resolv.conf /etc/resolv.conf && \
+    apt install apt-transport-https ca-certificates && \
+    cp ~/boot/sources.list /etc/apt/sources.list && \
     # apt install application
     apt-get update && \
     apt-get install --no-install-recommends --no-install-suggests -y \
@@ -48,5 +51,5 @@ VOLUME /var/lib/docker
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-EXPOSE 2222
+EXPOSE 36000
 CMD ["/usr/bin/zsh","-l"]
