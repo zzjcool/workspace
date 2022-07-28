@@ -19,12 +19,11 @@ RUN set -x && \
     docker-compose \
     git \
     make \
+    vim \
     gcc \
     g++ \
     iputils-ping \
     telnet \
-    pinentry \
-    xprop \
     zip \
     sudo \
     unzip \
