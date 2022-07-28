@@ -5,7 +5,7 @@ services:
     container_name: workspace
     privileged: true
     ports:
-      - "2222:2222"
+      - "36000:36000"
     volumes:
       # 这里替换成需要挂载的目录
       - "/home/zheng:/root/host"

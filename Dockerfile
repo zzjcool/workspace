@@ -23,6 +23,8 @@ RUN set -x && \
     g++ \
     iputils-ping \
     telnet \
+    pinentry \
+    xprop \
     zip \
     sudo \
     unzip \
@@ -52,6 +54,8 @@ RUN set -x  && \
     sh /root/boot/install_kubectl.sh && \
     # install java8
     sh /root/boot/install_java8.sh && \
+    # install git-crypt
+    sh /root/boot/install_gitcrypt.sh && \
     # install java11
     sh /root/boot/install_java11.sh && \
     # install helm

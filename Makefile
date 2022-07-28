@@ -9,7 +9,7 @@ test:
 	# 测试镜像
 	# 请使用docker exec -it test-workspace zsh进入
 	# docker run -it -v host:/root -v /home:/root/host --name test-workspace --privileged --rm ${IMAGE}
-	docker run -it --network host --name test-workspace --privileged ${IMAGE}
+	docker run -it --name test-workspace --privileged --rm ${IMAGE}
 
 push:
 	docker push ${IMAGE}
