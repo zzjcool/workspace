@@ -6,13 +6,11 @@ COPY --from=docker /usr/local/bin/ /usr/local/bin/
 VOLUME /var/lib/docker
 
 COPY config/sources.list /etc/apt/sources.list
-RUN set -x && \
-    apt-get update && apt-get upgrade -y && \
-    apt-get install -y apt-transport-https ca-certificates
-
 
 # 安装基础环境
 RUN set -x && \
+    apt-get update && apt-get upgrade -y && \
+    apt-get install -y apt-transport-https ca-certificates && \
     echo "export LC_ALL=en_US.UTF-8"  >>  /etc/profile && \
     apt-get install --no-install-recommends --no-install-suggests -y \
     clang-format \
@@ -56,6 +54,8 @@ RUN set -x  && \
     sh /root/boot/install_java8.sh && \
     # install java11
     sh /root/boot/install_java11.sh && \
+    # install helm
+    sh /root/boot/install_helm.sh && \
     # install maven
     sh /root/boot/install_maven.sh && \
     # install ssh
